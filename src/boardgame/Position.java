@@ -8,12 +8,13 @@ public class Position {
     private int row; // linha
     private int column;// coluna
 
+    //Construtor
     public Position(int row, int color) {
         this.row = row;
         this.column = color;
     }
 
-
+    //getters e Setterss
     public int getRow() {
         return row;
     }
@@ -30,7 +31,7 @@ public class Position {
         this.column = color;
     }
     @Override
-   //para mostrar linha e coluna
+   // mostrar linha e coluna
     public String toString(){
         return row + ", "+ column;
     }
