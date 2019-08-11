@@ -23,11 +23,11 @@ public class Position {
         this.row = row;
     }
 
-    public int getColor() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColor(int color) {
+    public void setColumn(int color) {
         this.column = color;
     }
     @Override

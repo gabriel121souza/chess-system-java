@@ -31,5 +31,12 @@ public int getRows() {
         this.column = column;
     }
 
-    
+    public Piece piece(int row, int column ){
+        return  pieces[row][column];
+        
+    }
+    //pega as posiçao
+    public Piece pieces(Position position){
+        return pieces[position.getRow()][position.getColumn()];
+    }
 }
