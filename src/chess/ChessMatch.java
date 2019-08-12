@@ -32,10 +32,14 @@ public class ChessMatch {
         //inserindo as pecas no tabuleiros
         
     }
-     private void initialSetup(){
-         board.placePiece(new Rook(board, Color.Whiter), new Position(2, 1));
-          board.placePiece(new King(board, Color.Whiter), new Position(4, 5));
-           board.placePiece(new King(board, Color.BlACK), new Position(4, 1));
+        private void placeNewPiece(char column, int row, ChessPiece piece){
+            board.placePiece(piece, new ChessPosition(column, row).toPosition());
+        }
+    
+    private void initialSetup(){
+        placeNewPiece('b', 6, new Rook(board, Color.Whiter));
+        placeNewPiece('e', 8, new King(board, Color.Whiter));
+        placeNewPiece('e',1 ,new King(board, Color.BlACK));
      }
 }
 
