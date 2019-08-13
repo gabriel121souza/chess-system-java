@@ -53,9 +53,14 @@ public class ChessMatch {
         
         //validando a peca
         private void validateSourcePosition(Position position){
-            if(!board.thereIsAPiece(position))
+            if(!board.thereIsAPiece(position)){
                 throw new ChessException("position not on source position");
             
+            }
+        
+        if(!board.piece(position).isThereAnyPossibleMove()){
+            throw new ChessException("there is no possible moves for the chosen piece");
+                    }  
         }
         
         
@@ -68,17 +73,17 @@ public class ChessMatch {
 		placeNewPiece('e', 5, new King(board, Color.Whiter));
 		placeNewPiece('e', 1, new King(board, Color.BlACK));
 		placeNewPiece('c', 1, new Rook(board, Color.Whiter));
-        placeNewPiece('c', 2, new Rook(board, Color.Whiter));
-        placeNewPiece('d', 2, new Rook(board, Color.Whiter));
-        placeNewPiece('e', 2, new Rook(board, Color.Whiter));
-        placeNewPiece('e', 4, new Rook(board, Color.Whiter));
+        placeNewPiece('c', 2, new Rook(board, Color.Whiter) );
+        placeNewPiece('d', 2, new Rook(board, Color.Whiter) );
+        placeNewPiece('e', 2, new Rook(board, Color.Whiter) );
+        placeNewPiece('e', 4, new Rook(board, Color.Whiter) );
         placeNewPiece('d', 1, new King(board, Color.Whiter));
 
-        placeNewPiece('c', 7, new Rook(board, Color.BlACK));
-        placeNewPiece('c', 8, new Rook(board, Color.BlACK));
-        placeNewPiece('d', 7, new Rook(board, Color.BlACK));
-        placeNewPiece('e', 7, new Rook(board, Color.BlACK));
-        placeNewPiece('e', 8, new Rook(board, Color.BlACK));
+        placeNewPiece('c', 7, new Rook(board, Color.BlACK) );
+        placeNewPiece('c', 8, new Rook(board, Color.BlACK) );
+        placeNewPiece('d', 7, new Rook(board, Color.BlACK) );
+        placeNewPiece('e', 7, new Rook(board, Color.BlACK) );
+        placeNewPiece('e', 8, new Rook(board, Color.BlACK) );
         placeNewPiece('d', 8, new King(board, Color.BlACK));
 }
 }
