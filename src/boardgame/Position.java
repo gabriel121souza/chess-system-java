@@ -8,31 +8,32 @@ public class Position {
     private int row; // linha
     private int column;// coluna
 
-    //Construtor
-    public Position(int row, int color) {
-        this.row = row;
-        this.column = color;
-    }
+	
+	public Position(int row, int column) {
+		this.row = row;
+		this.column = column;
+	}
+	public int getRow() {
+		return row;
+	}
+	public void setRow(int row) {
+		this.row = row;
+	}
+	public int getColumn() {
+		return column;
+	}
+	public void setColumn(int column) {
+		this.column = column;
+	}
 
-    //getters e Setterss
-    public int getRow() {
-        return row;
-    }
+	public void setValues(int row, int column) {
+		this.row = row;
+		this.column = column;
+	}
 
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int color) {
-        this.column = color;
-    }
-    @Override
-   // mostrar linha e coluna
-    public String toString(){
-        return row + ", "+ column;
-    }
+	@Override
+	public String toString() {
+		return row + ", " + column;
+                
+        }
 }
